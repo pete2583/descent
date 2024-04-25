@@ -1,0 +1,13 @@
+[Unit]
+Description=Descent
+[Service]
+ExecStart=/usr/bin/local/yarn start
+WorkingDirectory=/home/user/descent
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=descent
+User=root
+Group=root
+Environment=SPOTIFY_CLIENT=*CLEINT CODE* SPOTIFY_SECRET=*SECRET CODE* HUE_ID=*APP NAME FROM API* HUE_CLIENT=*HUE CLEINT* HUE_SECRET=*HUE SECRET*
+[Install]
+WantedBy=multi-user.target
