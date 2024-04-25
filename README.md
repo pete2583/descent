@@ -70,6 +70,8 @@ application to provide a few required values. Set your app ID as the `HUE_ID`
 environment variable, your client ID as the `HUE_CLIENT` environment variable,
 and your client secret as the `HUE_SECRET` environment variable.
 
+When setting up the API the callback URL should be: descentaddress/app/hue/authorize
+
 ### Last.fm Rate Limiting
 
 To avoid Last.fm rate limiting, you can adjust the API polling interval. Set
