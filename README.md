@@ -71,10 +71,8 @@ isn't loading, increase the interval.
 
 ### Descent Configuration
 
-To configure the background, weather, and time displays, visit
-[`/app/config`](https://descent.live/app/config). Dark Sky can
-automatically determine weather units, but OpenWeatherMap cannot, so Descent
-defaults to imperial units unless otherwise specified.
+To configure the background visit
+[`/app/config`](https://descent.live/app/config). 
 
 #### Descent Configuration Import
 
