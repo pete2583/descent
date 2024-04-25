@@ -14,6 +14,44 @@ function initMenu() {
       updateHue();
     });
   }
+  
+if (!Element.prototype.requestFullscreen) {
+	Element.prototype.requestFullscreen = Element.prototype.mozRequestFullscreen || Element.prototype.webkitRequestFullscreen || Element.prototype.msRequestFullscreen;
+}
+
+if (!document.exitFullscreen) {
+	document.exitFullscreen = document.mozExitFullscreen || document.webkitExitFullscreen || document.msExitFullscreen;
+}
+
+if (!document.fullscreenElement) {
+
+	Object.defineProperty(document, 'fullscreenElement', {
+		get: function() {
+			return document.mozFullScreenElement || document.msFullscreenElement || document.webkitFullscreenElement;
+		}
+	});
+
+	Object.defineProperty(document, 'fullscreenEnabled', {
+		get: function() {
+			return document.mozFullScreenEnabled || document.msFullscreenEnabled || document.webkitFullscreenEnabled;
+		}
+	});
+}
+
+document.addEventListener('click', function (event) {
+
+	// Ignore clicks that weren't on the toggle button
+	if (!event.target.hasAttribute('data-toggle-fullscreen')) return;
+
+	// If there's an element in fullscreen, exit
+	// Otherwise, enter it
+	if (document.fullscreenElement) {
+		document.exitFullscreen();
+	} else {
+		document.documentElement.requestFullscreen();
+	}
+
+}, false);
 
   // Set function for key presses
   window.onkeydown = processKey;
@@ -23,6 +61,7 @@ function initMenu() {
 
   // Fade menu after initial pause
   setTimeout(() => { toggleDisplay('.help', false); }, 3600);
+  onmouseenter(() => { toggleDisplay('.help'); break;
 
   // Save current user to populate index input
   Cookies.set('lastUser', $('.music .user').text(), { expires: 3650, secure: true });
@@ -63,22 +102,6 @@ function processKey(event) {
         on = undefined;
       }
       toggleHue(on);
-      break;
-    }
-    // Handle T to toggle date and time
-    case 84: {
-      toggleCookie('datetimeOn');
-      toggleDisplay('.datetime');
-      break;
-    }
-    // Handle W to toggle weather
-    case 87: {
-      let showW = false;
-      if (resources.features.weather) {
-        toggleCookie('weatherOn');
-        showW = undefined;
-      }
-      toggleDisplay('.weather', showW);
       break;
     }
   }
