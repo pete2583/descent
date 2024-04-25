@@ -12,7 +12,7 @@ Added more info to the Readme for the Hue API
 
 [![Deploy to GCP App Engine](https://github.com/JasonPuglisi/descent/actions/workflows/deploy-app-engine.yaml/badge.svg?branch=main)](https://github.com/JasonPuglisi/descent/actions/workflows/deploy-app-engine.yaml)
 
-Elegant now playing display for Last.fm showing song metadata and local weather.
+Elegant now playing display for Last.fm showing song metadata.
 
 ## Overview
 
