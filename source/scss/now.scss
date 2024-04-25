@@ -78,14 +78,14 @@ h2 {
 }
 
 .row {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
   width: 100%;
 }
 
+.music {
+  text-align: center;
+}
+
 .row.top {
-  align-items: flex-start;
 }
 
 .row.bottom {
@@ -105,28 +105,29 @@ h2 {
 }
 
 .cover {
-  width: 32vw;
+  width: 40%;
 }
 
-/* Media queries */
+/* Media queries 
 
 // Bootstrap equivalent: medium
 @media (min-width: 768px) {
   .cover {
-    width: 28vw;
+    width: 80%;
   }
 }
 
 // Bootstrap equivalent: large
 @media (min-width: 992px) {
   .cover {
-    width: 24vw;
+    width: 80%;
   }
 }
 
 // Bootstrap equivalent: extra large
 @media (min-width: 1200px) {
   .cover {
-    width: 20vw;
+    width: 80%;
   }
 }
+*/
