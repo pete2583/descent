@@ -1,6 +1,7 @@
 # My edits
 
 Simplifeid view - removed options to display weather and time. Moved the now playing to the centre of the screen. 
+
 Added fullscreen button (although currently keypress is not activated. So you'll have to click the link in the menu. If menu is hidden press h then select the link
 
 # Descent
