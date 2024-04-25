@@ -61,7 +61,6 @@ document.addEventListener('click', function (event) {
 
   // Fade menu after initial pause
   setTimeout(() => { toggleDisplay('.help', false); }, 3600);
-  onmouseenter(() => { toggleDisplay('.help'); break;
 
   // Save current user to populate index input
   Cookies.set('lastUser', $('.music .user').text(), { expires: 3650, secure: true });
