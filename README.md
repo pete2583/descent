@@ -40,23 +40,6 @@ Navigate to [`/`](https://descent.live/) to use Descent.
 
 ## API Requirements
 
-### Weather
-
-Weather is powered by the [Dark Sky API](https://darksky.net/dev/), or the
-[OpenWeatherMap API](https://openweathermap.org/api). To use either, you will
-need to provide an API key. For Dark Sky, set your key as the `DARK_SKY_KEY`
-environment variable. For OpenWeatherMap, set your key as the
-`OPENWEATHERMAP_KEY` environment variable.
-
-Dark Sky will take precedence, and OpenWeatherMap will be used if no Dark Sky
-API key is provided, or if a Dark Sky API request fails. Dark Sky provides more
-detailed weather summaries, but the officialy-hosted Descent uses
-OpenWeatherMap to avoid fees.
-
-For users to enable weather display, they must allow the Descent website to
-access their location. This feature relies on HTML5 geolocation, so it may only
-work in some modern browsers.
-
 ### Spotify Images
 
 Album cover and artist images and provided by the
@@ -108,32 +91,8 @@ parameter correponds to a cookie. Valid parameters and values are as follows:
 **Default background image**  
 `defaultBackground`: any valid image URL
 
-**Weather location latitude**  
-`latitude`: any valid latitude coordinate
-
-**Weather location longitude**  
-`longitude`: any valid longitude coordinate
-
-**Weather units**  
-`units`: `imperial`, `metric`
-
-**Date/time 24-hour display**  
-`24hr`: `true`, `false`
-
-**Date/time weekday display**  
-`weekday`: `true`, `false`
-
-**Date/time seconds display**  
-`seconds`: `true`, `false`
-
 **User to redirect to**  
 `lastUser`: any valid Last.fm username
-
-**Weather display enabled**  
-`weatherOn`: `true`, `false`
-
-**Date/time display enabled**  
-`datetimeOn`: `true`, `false`
 
 **Extended information display enabled**  
 `extendedOn`: `true`, `false`
