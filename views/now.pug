@@ -1,67 +1,13 @@
 extends template/layout
 
 block otherStylesheets
-  +weatherIcons
   link(href='/app/static/stylesheets/now.css', rel='stylesheet')
 
 block content
   .background.blur
   .container
     .row.top
-      .corner.left
-        .datetime.hide
-          h2.date
-          h1.time
-      .corner.right
-        .weather.hide
-          h2.summary
-          h1.conditions
-            i.icon
-            | &nbsp;
-            span.temperature
-            | &deg;
-            span.unit
-            | &nbsp;
-            span.apparent
-              | Feels like&nbsp;
-              span.apparentTemperature
-              | &deg;
-              span.unit
-    .row.bottom
-      .corner.left
-        .help.code
-          .links
-            a(href='/app/config')
-              | settings 
-              i.fas.fa-sliders-h.fa-sm
-            a(href='https://github.com/JasonPuglisi/descent' target='_blank')
-              | source 
-              i.fab.fa-github.fa-sm
-          .menuItem
-            a(href='#' onclick='processKey({ keyCode: 87 }); return false;')
-              i.fas.fa-sun.fa-sm.fa-fw
-              |  [w]eather
-          .menuItem
-            a(href='#' onclick='processKey({ keyCode: 84 }); return false;')
-              i.fas.fa-clock.fa-sm.fa-fw
-              |  [t]ime and date
-          .menuItem
-            a(href='#' onclick='processKey({ keyCode: 69 }); return false;')
-              i.fas.fa-sticky-note.fa-sm.fa-fw
-              |  [e]xtended info
-          .menuItem
-            span.hueHelp.hide
-              a(href='#' onclick='processKey({ keyCode: 76 }); return false;')
-                i.fas.fa-lightbulb.fa-sm.fa-fw
-                |  [l]ights (
-                span.hueIndicator off
-                | )
-          .menuItem
-            a(href='#' onclick='processKey({ keyCode: 72 }); return false;')
-              i.fas.fa-question.fa-sm.fa-fw
-              |  [h]elp
-      .corner.right
-        .music
+      .music
           h2.userLine.hide
             p.scrobbles.hide
               b
@@ -83,6 +29,38 @@ block content
             img.cover
           h1.title
           h2.artist
+    .row.bottom
+      .corner.left
+        .help.code
+          .links
+            a(href='/app/config')
+              | settings 
+              i.fas.fa-sliders-h.fa-sm
+            a(href='https://github.com/JasonPuglisi/descent' target='_blank')
+              | source 
+              i.fab.fa-github.fa-sm
+          .menuItem
+            a(href='#' onclick='processKey({ keyCode: 69 }); return false;')
+              i.fas.fa-sticky-note.fa-sm.fa-fw
+              |  [e]xtended info
+          .menuItem
+            span.hueHelp.hide
+              a(href='#' onclick='processKey({ keyCode: 76 }); return false;')
+                i.fas.fa-lightbulb.fa-sm.fa-fw
+                |  [l]ights (
+                span.hueIndicator off
+                | )
+          .menuItem
+            a(href='#' onclick='processKey({ keyCode: 72 }); return false;')
+              i.fas.fa-question.fa-sm.fa-fw
+              |  [h]elp
+          .menuItem
+            a(href='#' data-toggle-fullscreen)
+              i.fas.fa-tablet-screen-button.fa-sm.fa-fw
+              |  fullscreen
+		  
+      .corner.right
+        
 
 block otherJavascripts
   +colorThief
@@ -92,6 +70,4 @@ block otherJavascripts
   script(src='/app/static/javascripts/utility/images.js')
   script(src='/app/static/javascripts/utility/menu.js')
   script(src='/app/static/javascripts/utility/metadata.js')
-  script(src='/app/static/javascripts/utility/time.js')
-  script(src='/app/static/javascripts/utility/weather.js')
   script(src='/app/static/javascripts/now.js')
